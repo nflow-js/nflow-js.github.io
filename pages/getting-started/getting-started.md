@@ -10,7 +10,7 @@ permalink: /getting-started/
 The easiest way to download nFlow is through npm:
 
 ```js
-npm install --save @nflow/nflow
+npm install --save nflow
 ```
 Alternatively, you can download the library as a zip file from the [nFlow GitHub page](https://github.com/mere/nflow).
 
@@ -27,7 +27,7 @@ First, you need to grab an istance of nFlow.
 If you use nFlow in NodeJS, browserify or Webpack, you can simply import a flow instance:
 
 ```js
-import flow from '@nFlow/nFlow';
+import flow from 'nflow';
 
 flow.create('hello')
 ```
