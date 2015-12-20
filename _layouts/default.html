@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en-us">
+  <head>
+   <title>{% if page.title %}{{ page.title }} – {% endif %}{{ site.name }} – {{ site.description }}</title>
+
+    {% include meta.html %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/vendor/flow-vis/styles.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/vendor/font-awesome/css/font-awesome.css" media="screen">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" media="screen">
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
+    <script src="{{ site.baseurl }}/vendor/d3.js"></script>
+    <script src="{{ site.baseurl }}/vendor/nflow/dist/flow.js"></script>
+    <script src="{{ site.baseurl }}/vendor/flow-vis/flow-vis.js"></script>
+    <script src="{{ site.baseurl }}/pages/main.js"></script>
+  </head>
+  <body
+    {% if page.class %}class="{{ page.class }}" {% endif %}
+  >
+    <section class="page-header">
+      <h1 class="project-name">
+        <a href="{{ site.baseurl }}/" >nFlow<span> Beta</span></a>
+      </h1>
+      <h2 class="project-tagline">Event/control/data flow</h2>
+      <nav>
+        <a href="{{ site.baseurl }}/getting-started" class="btn">Get Started</a>
+        <a href="{{ site.baseurl }}/event-flow" class="btn">Event Flow</a>
+        <a href="{{ site.baseurl }}/data-flow" class="btn">Data Flow</a>
+        <a href="{{ site.baseurl }}/control-flow" class="btn">Control Flow</a>
+        <a href="{{ site.baseurl }}/docs" class="btn">Documentation</a>
+      </nav>
+    </section>
+    
+    {% include sidemenu.html %}
+    <section class="main-content">
+      {{ content }}
+      {% include footer.html %}
+    </section>
+    <script src="{{ site.baseurl }}/pages/post-process.js"></script>
+  </body>
+</html>

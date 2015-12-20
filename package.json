@@ -1,0 +1,22 @@
+{
+  "name": "nflow-gh-pages",
+  "version": "1.0.0",
+  "description": "- [install jekyll](https://help.github.com/articles/using-jekyll-with-pages/)  - run `bundle install`  - run `bundle exec jekyll serve`",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mere/nflow.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mere/nflow/issues"
+  },
+  "homepage": "https://github.com/mere/nflow#readme",
+  "devDependencies": {
+    "d3": "^3.5.9"
+  }
+}

@@ -1,0 +1,44 @@
+body, html {
+  height:100%;
+}
+
+.node {
+    cursor: pointer;
+  }
+
+  .node path {
+    fill: #fff;
+    stroke: #159957;
+    stroke-width: 2px;
+  }
+  
+  .node path.is-flow {
+    fill: #C1E0F5;
+    stroke: #1f8dd6;
+    stroke-width: 2px;
+  }
+
+
+  .node text {
+    font-size: 1.1rem;
+    fill: #606c71;
+    font-family: "Open Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+  .link {
+    fill: none;
+    stroke: #606c71;
+    stroke-width: 2px;
+    transition: stroke-dashoffset 1s ease-in-out;
+     
+  }
+
+  .link.is-flow{
+    stroke-dasharray: 5,5;
+  }
+
+  .link.is-removed{
+    
+    stroke-dasharray: 250;
+    stroke-dashoffset: -250;
+  }
