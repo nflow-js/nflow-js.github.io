@@ -567,6 +567,27 @@ __Returns__
 >
 > Cancelling a flow object effectively cancels all of its child objects recursively.
 
+__Example__
+
+<figure class='cancel1' ></figure>
+<script type="text/javascript">(function(){
+  var f = initTree('.cancel1', 'f')
+  var a = f.create('a')
+  a.create('a1')
+  a.create('a2')
+  f.create('b')
+  a.cancel()
+  
+}())</script>
+```js
+var a = f.create('a')
+  a.create('a1')
+  a.create('a2')
+f.create('b') 
+a.parent(cancel)
+
+```
+
 
 ## isCancelled
 ```js
