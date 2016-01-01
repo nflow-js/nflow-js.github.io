@@ -51,7 +51,9 @@ Since in `nFlow` events are also `flow` objects, this allows you to "respond" to
         event.emit('pizza-ready', {})
       },1500)
       })
-  a.emit('i-am-hungry')
+  a
+  .on('pizza-ready', function(){})
+  .emit('i-am-hungry')
 
 }())</script>
 
