@@ -575,15 +575,16 @@ __Example__
   var a = f.create('a')
   var b = f.create('b')
   var c = a.create('c')
-  var d = a.create('b')
+  var d = a.create('d')
 
+  a.cancel()
   
 }())</script>
 ```js
 var a = f.create('a')
 var b = f.create('b')
 var c = a.create('c')
-var d = a.create('b')
+var d = a.create('d')
 
 a.cancel()
 
