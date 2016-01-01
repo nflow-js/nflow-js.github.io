@@ -573,18 +573,19 @@ __Example__
 <script type="text/javascript">(function(){
   var f = initTree('.cancel1', 'f')
   var a = f.create('a')
-  a.create('a1')
-  a.create('a2')
-  f.create('b')
-  a.cancel()
+  var b = f.create('b')
+  var c = a.create('c')
+  var d = a.create('b')
+
   
 }())</script>
 ```js
 var a = f.create('a')
-  a.create('a1')
-  a.create('a2')
-f.create('b') 
-a.parent(cancel)
+var b = f.create('b')
+var c = a.create('c')
+var d = a.create('b')
+
+a.cancel()
 
 ```
 
