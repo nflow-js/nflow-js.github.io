@@ -10,7 +10,7 @@ function updateSideMenu(){
 
 function initTree(e, name){
   var dom = d3.select(e)
-  var f = flow.create(name || 'flow').parent(null)
+  var f = nflow.create(name || 'flow').parent(null)
   tree().dom(dom.node()).flow(f)
   return f
 }
