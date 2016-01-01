@@ -8,6 +8,7 @@ function updateSideMenu(){
   d3Body.classed('has-sidemenu', document.body.scrollTop>=headerHeight)
 }
 
+nflow.enableDevTools()
 function initTree(e, name){
   var dom = d3.select(e)
   var f = nflow.create(name || 'flow').parent(null)
