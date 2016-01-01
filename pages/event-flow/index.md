@@ -13,7 +13,7 @@ Flow.js can be used as a simple event bus for establishing comunication between 
 <script type="text/javascript">(function(){
   
   var dom = d3.select('.example1')
-  var f = flow.create('flow.js').parent(null)
+  var f = nflow.create('flow.js').parent(null)
   tree()
     .dom(dom.node())
     .flow(f)
@@ -47,7 +47,7 @@ In the example above, when `'hello'` is dispatched, the event flows upstream to 
 <script type="text/javascript">(function(){
 
   var dom = d3.select('.example2')
-  var f = flow.create('flow.js').parent(null)
+  var f = nflow.create('flow.js').parent(null)
   tree()
     .dom(dom.node())
     .flow(f)
@@ -81,7 +81,7 @@ d.emit('hello')
 <script type="text/javascript">(function(){
 
   var dom = d3.select('.example3')
-  var f = flow.create('flow.js').parent(null)
+  var f = nflow.create('flow.js').parent(null)
   tree()
     .dom(dom.node())
     .flow(f)
@@ -119,7 +119,7 @@ When a branch is separated from its parent tree, no events will flow in or out b
 <script type="text/javascript">(function(){
 
   var dom = d3.select('.example4')
-  var f = flow.create('flow.js').parent(null)
+  var f = nflow.create('flow.js').parent(null)
   tree()
     .dom(dom.node())
     .flow(f)
