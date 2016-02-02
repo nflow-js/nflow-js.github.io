@@ -56,7 +56,7 @@ In the example above, when `'hello'` is dispatched, the event flows upstream to 
   var b = f.create('b')
   var c = f.create('c')
   var d = b.create('b1')
-  var e = b.create('b2')
+  var e = b.create('b2').on('hello', function(){})
   var d = f.create('d')
 
   d.emit('hello')
