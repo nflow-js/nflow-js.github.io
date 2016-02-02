@@ -55,7 +55,7 @@ In the example above, when `'hello'` is dispatched, the event flows upstream to 
   var a = f.create('a')
   var b = f.create('b')
   var c = f.create('c')
-  var d = b.create('b1')
+  var d = b.create('b1').on('hello', function(){})
   var e = b.create('b2').on('hello', function(){})
   var d = f.create('d')
 
@@ -67,8 +67,8 @@ import f from 'flow';
 
 var a = flow.create('a')
 var b = flow.create('b')
-var b1 = b.create('b1')
-var b2 = b.create('b2')
+var b1 = b.create('b1').on('hello', function(){})
+var b2 = b.create('b2').on('hello', function(){})
 var c = flow.create('c')
 var d = f.create('d')
 
