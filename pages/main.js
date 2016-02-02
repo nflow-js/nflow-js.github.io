@@ -1,6 +1,6 @@
 d3.select(window)
   .on('scroll.sidemenu', updateSideMenu)
-
+nflow = nFlow
 function updateSideMenu(){
   var d3Body = d3.select('body')
   var d3Header = d3Body.select('.page-header')
