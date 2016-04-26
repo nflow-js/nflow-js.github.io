@@ -57,10 +57,11 @@ Since in `nFlow` events are also `flow` objects, this allows you to "respond" to
       this.emit('order-coke')
     })
     
-  a
+  var event = a
   .on('pizza-ready', function(){})
   .emit('i-am-hungry')
 
+setTimeout(function(){event.cancel() }, 2000)
 }())</script>
 
 ```js
