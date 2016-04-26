@@ -19,8 +19,7 @@ Flow.js can be used as a simple event bus for establishing comunication between 
     .flow(f)
 
   var a = f.create('a').on('hello', function(){
-    
-    a.emit('hi')
+    this.emit('hi')
     
   })
   f.create('b').on('hello', function(){})
