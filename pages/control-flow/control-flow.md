@@ -52,10 +52,10 @@ Since in `nFlow` events are also `flow` objects, this allows you to "respond" to
       },1500)
       })
       
-  f.create('dad')    
-    .on('order-pizza', function(){
-      this.emit('order-coke')
-    })
+  //f.create('dad')    
+  //  .on('order-pizza', function(){
+      //this.emit('order-coke')
+  //  })
     
   var event = a
   .on('pizza-ready', function(){})
