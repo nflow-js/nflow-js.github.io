@@ -16,7 +16,7 @@ function initTree(e, name){
   var tree =  nflowVis.Vis()
     .call(nflowVis.Tree)
     .emit('track', f)
-    .emit('dom', d3.select('figure').node())
+    .emit('dom', d3.select(dom).node())
   
   return f
 }
