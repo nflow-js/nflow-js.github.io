@@ -10,13 +10,12 @@ function updateSideMenu(){
 
 nFlow.enableDevTools()
 function initTree(e, name){
-  var dom = d3.select(e)
   var f = nFlow.create(name || 'flow').parent(null)
   
   var tree =  nflowVis.Vis()
     .call(nflowVis.Tree)
     .emit('track', f)
-    .emit('dom', d3.select(dom).node())
+    .emit('dom', d3.select(e).node())
   
   return f
 }
