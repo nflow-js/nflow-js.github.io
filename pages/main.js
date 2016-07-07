@@ -13,12 +13,10 @@ function initTree(e, name){
   var dom = d3.select(e)
   var f = nFlow.create(name || 'flow').parent(null)
   
-  var tree =  nflow.create('vis')
-        .call(nflowVis.Tree)
-        .call(nflowVis.Vis)
-  tree.emit('dom', d3.select('figure').node())
-  tree.emit('dragging', false)
-  tree.emit('track', f)
+  var tree =  nflowVis.Vis()
+    .call(nflowVis.Tree)
+    .emit('track', f)
+    .emit('dom', d3.select('figure').node())
   
   return f
 }
