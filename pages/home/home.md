@@ -36,22 +36,33 @@ class: is-home
 </li>
 </ul>
 
-<figure class='is-full home1' ></figure>
-<script type="text/javascript">(function(){
-  var f = initTree('.home1')
 
-  var a = f.create('a')
-  
-  a.create('b').on('hello', function(){})
-  a.create('c')
-  
+## A Simple Example
+
+<figure class='example' ></figure>
+<script type="text/javascript">(function(){
+  var f = initTree('.example')
+   var a = f.create('a')
   var b = f.create('b')
   
-  var b1 = b.create('d')
-  var b2 = b.create('e')
+  a.create('b')
+    .on('hello', function(){})
+  
+  b.create('d')
+  b.create('e')
+    .emit('hello')
+}())</script>
+```js
+var a = f.create('a')
+  var b = f.create('b')
+  
+  a.create('b')
+    .on('hello', handler)
+  
+  b.create('d')
+  b.create('e')
     .emit('hello')
 
-}())</script>
-
+```
 
 
