@@ -11,13 +11,7 @@ Flow.js can be used as a simple event bus for establishing comunication between 
 
 <figure class='example1' ></figure>
 <script type="text/javascript">(function(){
-  
-  var dom = d3.select('.example1')
-  var f = nflow.create('flow.js').parent(null)
-  tree()
-    .dom(dom.node())
-    .flow(f)
-
+  var f = initTree('.example1')
   var a = f.create('a').on('hello', function(){
     this.emit('hi')
     
@@ -48,12 +42,7 @@ In the example above, when `'hello'` is dispatched, the event flows upstream to 
 ## Event Tree Example
 <figure class='example2' ></figure>
 <script type="text/javascript">(function(){
-
-  var dom = d3.select('.example2')
-  var f = nflow.create('flow.js').parent(null)
-  tree()
-    .dom(dom.node())
-    .flow(f)
+var f = initTree('.example2')
 
   var a = f.create('a')
   var b = f.create('b')
@@ -82,12 +71,7 @@ d.emit('hello')
 ### Multiple Event Trees
 <figure class='example3' ></figure>
 <script type="text/javascript">(function(){
-
-  var dom = d3.select('.example3')
-  var f = nflow.create('flow.js').parent(null)
-  tree()
-    .dom(dom.node())
-    .flow(f)
+var f = initTree('.example3')
 
   var a = f.create('a')
   setTimeout(function(){ a.parent(null) }, 2000)
@@ -120,12 +104,7 @@ When a branch is separated from its parent tree, no events will flow in or out b
 ### Re-parenting
 <figure class='example4' ></figure>
 <script type="text/javascript">(function(){
-
-  var dom = d3.select('.example4')
-  var f = nflow.create('flow.js').parent(null)
-  tree()
-    .dom(dom.node())
-    .flow(f)
+  var f = initTree('.example4')
 
   var a = f.create('a')
   a.create('a1')
