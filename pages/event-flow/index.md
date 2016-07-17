@@ -55,13 +55,13 @@ var f = initTree('.example2')
 
 }())</script>
 ```js
-import f from 'flow';
+import f from 'nflow';
 
-var a = flow.create('a')
-var b = flow.create('b')
+var a = f.create('a')
+var b = f.create('b')
 var b1 = b.create('b1').on('hello', function(){})
 var b2 = b.create('b2').on('hello', function(){})
-var c = flow.create('c')
+var c = f.create('c')
 var d = f.create('d')
 
 d.emit('hello')
@@ -84,7 +84,9 @@ var f = initTree('.example3')
 
 }())</script>
 ```js
-var a = flow.create('a')
+import nflow from 'nflow'
+
+var a = nflow.create('a')
 a.parent(null)
 a.create('a1')
 a.create('a2')
@@ -117,11 +119,13 @@ When a branch is separated from its parent tree, no events will flow in or out b
 
 }())</script>
 ```js
-var a = flow.create('a')
+import nflow from 'nflow';
+
+var a = nflow.create('a')
 a.create('a1')
 a.create('a2')
 
-var b = flow.create('c')
+var b = nflow.create('c')
 a.parent(b)
 ```
 You can isolate part of a tree by setting a flow object's parent to null.
