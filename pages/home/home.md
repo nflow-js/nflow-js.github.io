@@ -58,7 +58,7 @@ class: is-home
   a.create('x')
     .on('hello', handler1)
     
-  b.create('y')
+  a.create('y')
     .on('hello', handler2)
   
   b.emit('hello')
