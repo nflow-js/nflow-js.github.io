@@ -12,10 +12,7 @@ Flow.js can be used as a simple event bus for establishing comunication between 
 <figure class='example1' ></figure>
 <script type="text/javascript">(function(){
   var f = initTree('.example1')
-  var a = f.create('a').on('hello', function(){
-    this.emit('hi')
-    
-  })
+  var a = f.create('a').on('hello', function(){})
   f.create('b').on('hello', function(){})
   f.create('c')
     .emit('hello')
@@ -67,6 +64,7 @@ var d = f.create('d')
 d.emit('hello')
 ```
 
+When an event is dispatched on a complex event tree, the event flows upstream to the root node. Once it reached the root, it traverses the tree(depth-first) to reach all recipients.
 
 
 
