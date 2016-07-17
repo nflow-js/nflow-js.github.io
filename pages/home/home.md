@@ -7,9 +7,7 @@ class: is-home
 
 ## Overview
 
-`nFlow` is a javascript library, designed to help you manage your application's event, control and data flow.
-
-You can think of nFlow as the "glue" between different parts of your application.
+`nflow` is hierarchical event dispatcher for managing your application's event, control and data flow.
 
 ## Features
 
@@ -52,11 +50,13 @@ You can think of nFlow as the "glue" between different parts of your application
   var f = initTree('.home1')
 
   var a = f.create('a')
+    .on('hello', function(){})
   var b = f.create('b')
   var b1 = b.create('b1')
   var b2 = b.create('b2')
   var c = f.create('c')
   var d = f.create('d')
+    .emit('hello')
 
   c.emit('hello')
 }())</script>
