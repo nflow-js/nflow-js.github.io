@@ -42,27 +42,35 @@ class: is-home
 <figure class='example' ></figure>
 <script type="text/javascript">(function(){
   var f = initTree('.example')
-   var a = f.create('a')
+  
+  var a = f.create('a')
   var b = f.create('b')
   
-  a.create('b')
-    .on('hello', function(){})
+  a.create('x').on('hello', function(){})
+  b.create('y').on('hello', function(){})
   
-  b.create('d')
-  b.create('e')
-    .emit('hello')
+  b.emit('hello')
 }())</script>
 ```js
-var a = f.create('a')
+  var a = f.create('a')
   var b = f.create('b')
   
-  a.create('b')
-    .on('hello', handler)
+  a.create('x')
+    .on('hello', handler1)
+    
+  b.create('y')
+    .on('hello', handler2)
   
-  b.create('d')
-  b.create('e')
-    .emit('hello')
+  b.emit('hello')
 
 ```
+
+
+
+
+
+
+
+
 
 
