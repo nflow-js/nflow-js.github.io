@@ -47,7 +47,7 @@ class: is-home
   var b = f.create('b')
   
   a.create('x').on('hello', function(){})
-  b.create('y').on('hello', function(){})
+  a.create('y').on('hello', function(){})
   
   b.emit('hello')
 }())</script>
