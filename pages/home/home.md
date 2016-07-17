@@ -9,9 +9,6 @@ class: is-home
 
 `nflow` is hierarchical event dispatcher for managing your application's event, control and data flow.
 
-## Features
-
-// TODO
 <ul class='features'>
 <li>  
   <h3><i class="fa fa-support"></i>Browser and Platform friendly</h2>
@@ -39,26 +36,21 @@ class: is-home
 </li>
 </ul>
 
-
-
-## The basics
-
-// TODO
-
 <figure class='is-full home1' ></figure>
 <script type="text/javascript">(function(){
   var f = initTree('.home1')
 
   var a = f.create('a')
-    .on('hello', function(){})
+  
+  a.create('b').on('hello', function(){})
+  a.create('c')
+  
   var b = f.create('b')
-  var b1 = b.create('b1')
-  var b2 = b.create('b2')
-  var c = f.create('c')
-  var d = f.create('d')
+  
+  var b1 = b.create('d')
+  var b2 = b.create('e')
     .emit('hello')
 
-  c.emit('hello')
 }())</script>
 
 
