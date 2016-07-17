@@ -275,6 +275,10 @@ aside {
   .project-tagline {
     text-align: right;
   }
+  
+  .project-tagline{
+    margin-right:2rem;
+  }
 
   &:hover{
     overflow-y: auto;
