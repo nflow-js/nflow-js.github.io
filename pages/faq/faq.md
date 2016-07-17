@@ -6,4 +6,4 @@ permalink: /faq/
 
 # FAQ
 
-//TODO
+Coming soon!
