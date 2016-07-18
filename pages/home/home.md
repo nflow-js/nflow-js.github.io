@@ -52,8 +52,10 @@ class: is-home
   b.emit('hello')
 }())</script>
 ```js
-  var a = f.create('a')
-  var b = f.create('b')
+  import nflow from 'nflow'
+  
+  let a = nflow.create('a')
+  let b = nflow.create('b')
   
   a.create('x')
     .on('hello', handler1)
@@ -67,7 +69,7 @@ class: is-home
 
 ## Try it online!
 
- - https://jsbin.com/wujesic/edit?js,output
+ - [https://jsbin.com/wujesic/edit?js,output](https://jsbin.com/wujesic/edit?js,output)
 
 
 
