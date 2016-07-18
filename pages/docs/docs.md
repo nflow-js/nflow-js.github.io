@@ -362,12 +362,6 @@ __Arguments__
  - `matcher` (String or Function): the name of the flow object to find, or a mathcer function
  - `[recursive]` (Boolean): if `false`: only immediate child nodes are searched
 
-__Returns__
-
- - `[...flow]` (Array): all flow instances that pass the matcher test
-
-__Example__
-
 <figure class='get2' ></figure>
 <script type="text/javascript">(function(){
   var f = initTree('.get2', 'f')
@@ -377,6 +371,13 @@ __Example__
     .create('d')
   
 }())</script>
+__Returns__
+
+ - `[...flow]` (Array): all flow instances that pass the matcher test
+
+__Example__
+
+
 ```js
 f.create('a', 9)
 f.create('b')
@@ -470,6 +471,12 @@ c.parents() // returns [d,a,f]
 ```
 > __Note:__
 > <br />It is possible to introduce cyclic dependency by setting one of the parents' `.parent` node to a child node. In this scenario `.parents()` will return an array of all unique parent nodes
+
+<br />
+<br />
+<br />
+
+
 
 ## status
 ```js
