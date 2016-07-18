@@ -579,7 +579,10 @@ var d = a.create('d')
 a.cancel()
 
 ```
-
+<br />
+<br />
+<br />
+<br />
 
 ## isCancelled
 ```js
@@ -665,8 +668,3 @@ __Returns__
 }
 ```
 
-## enableDevTools
-// TODO
-
-## logger
-// TODO
