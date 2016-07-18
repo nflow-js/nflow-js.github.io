@@ -65,7 +65,9 @@ class: is-home
 
 ```
 
+## Try it online!
 
+<a class="jsbin-embed" href="https://jsbin.com/wujesic/embed?output">JS Bin on jsbin.com</a><script src="https://static.jsbin.com/js/embed.min.js?3.37.0"></script>
 
 
 
