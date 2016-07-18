@@ -61,7 +61,6 @@ __Example__
   
   let c = a.create('c')
   let d = a.create('d')
-  
 ```
 
 __Aliases__
@@ -77,9 +76,10 @@ The following command chains are identical:
 <script type="text/javascript">(function(){
   var f = initTree('.on1')
   f.create('a')
-  var b = f.create('b')
-  f.create('c')
-  b.emit('hello')
+    .on('a', function(){})
+    .on('b', function(){})
+    .on('c', function(){})
+    .on('d', function(){})
 }())</script>
 ```js
 flow.on(name, ...listeners)
@@ -159,9 +159,10 @@ __Example__
 ## emit
 <figure class='emit1' ></figure>
 <script type="text/javascript">(function(){
-  var f = initTree('.emit1')
-  f.create('a')
-  var b = f.create('b')
+  var f = initTree('.emit1', 'hello')
+  f.create('a').on('hello', function(){})
+  
+  var b = f.create('b').on('hello', function(){})
   f.create('c')
   b.emit('hello')
 }())</script>
@@ -204,34 +205,7 @@ __Returns__
 > Listeners are invoked in the context of the emitted event. 
 > <br /> In the listeners the __this__ keyword always refers to the invoking event.
 > 
-> Since __events are also flow objects__, this allows subsequent events to be dispatched, creating a flow of sync/async actions:
-
-<figure class='emit2' style='height:300px;min-width:300px;' ></figure>
-<script type="text/javascript">(function(){
-  var f = initTree('.emit2')
-  var a = f.create('me')
-
-  f.create('you')
-    .on('i-am-hungry', function(){
-      var event = this
-      setTimeout(function(){
-        event.emit('bake-pizza')
-      },1500)
-      })
-  f.create('oven')
-    .on('bake-pizza', function(){
-      var event = this
-      setTimeout(function(){
-        event.emit('pizza-ready', {})
-      },1500)
-      })
-  a.emit('i-am-hungry')
-
-}())</script>
-> 
-> ```js
-foo.emit([name], [...payload])
-```
+> Since __events are also flow objects__, you can dispatch further events on them!
 
 ## name
 ```js
@@ -301,10 +275,6 @@ __Returns__
 
  - `[...flow]` An array of all immediate child flow objects
 
-> __Note__: this API only returns the __immediate children__. If you need to access all child objects recursively, use the `.get.all` API
-
-__Example__
-
 <figure class='children1' ></figure>
 <script type="text/javascript">(function(){
   var f = initTree('.children1', 'f')
@@ -314,6 +284,12 @@ __Example__
   f.create('c')
   
 }())</script>
+
+> __Note__: this API only returns the __immediate children__. If you need to access all child objects recursively, use the `.get.all` API
+
+__Example__
+
+
 ```js
 f.create('a')
 f.create('b')
