@@ -2,6 +2,7 @@
 layout: page
 title: Documentation
 permalink: /docs/
+class: is-docs
 ---
 
 # Documentation
@@ -45,16 +46,22 @@ __Example__
 <figure class='create2' ></figure>
 <script type="text/javascript">(function(){
   var f = initTree('.create2')
-  var a= f.create('a', { foo:'bar' } )
-  a.create('b', { foo:'baz' } )
+  
+  let a = f.create('a')
+  let b = f.create('b')
+  
+  let c = a.create('c')
+  let d = a.create('d')
+  
+  
 }())</script>
 ```js
-flow.create('a', { foo:'bar' } )
-a.create('b', { foo:'baz' } )
-
-b.parent() // returns a
-a.children() // returns [b]
-b.parent().data().foo // returns 'bar'
+  let a = f.create('a')
+  let b = f.create('b')
+  
+  let c = a.create('c')
+  let d = a.create('d')
+  
 ```
 
 __Aliases__
