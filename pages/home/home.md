@@ -41,7 +41,7 @@ class: is-home
 
 <figure class='example' ></figure>
 <script type="text/javascript">(function(){
-  var f = initTree('.example')
+  var f = initTree('.example', 'hello')
   
   var a = f.create('a')
   var b = f.create('b')
@@ -52,6 +52,7 @@ class: is-home
   b.emit('hello')
 }())</script>
 ```js
+
   import nflow from 'nflow'
   
   let a = nflow.create('a')
@@ -64,8 +65,10 @@ class: is-home
     .on('hello', handler2)
   
   b.emit('hello')
+  
 
 ```
+
 
 ## Try it online!
 
