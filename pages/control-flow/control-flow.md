@@ -32,7 +32,7 @@ __Dispatching events on events__
 
 Since in `nFlow` events are also `flow` objects, this allows you to "respond" to events by dispatching further events on them:
 
-<figure class='emit2' style='height:300px;min-width:300px;' ></figure>
+<figure class='emit2' style='height:350px;min-width:300px;' ></figure>
 <script type="text/javascript">(function(){
   var f = initTree('.emit2')
   var a = f.create('me')
