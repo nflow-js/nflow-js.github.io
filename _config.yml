@@ -1,6 +1,6 @@
 baseurl: ""
 
-markdown: kramdown
+markdown: redcarpet
 highlighter: pygments
 permalink: /:title/
 
