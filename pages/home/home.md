@@ -41,7 +41,7 @@ class: is-home
 
 <figure class='example' ></figure>
 <script type="text/javascript">(function(){
-  var f = initTree('.example', 'hello')
+  var f = initTree('.example', 'nflow', 'hello')
   
   var a = f.create('a')
   var b = f.create('b')
