@@ -8,8 +8,7 @@ function updateSideMenu(){
   d3Body.classed('has-sidemenu', document.body.scrollTop>=headerHeight)
 }
 
-nFlow.enableDevTools()
-function initTree(e, name){
+function initTree(e, name, selection){
   var f = nFlow.create(name || 'flow').parent(null)
   
   var tree =  nflowVis.Vis()
@@ -17,6 +16,7 @@ function initTree(e, name){
     .emit('track', f)
     .emit('dragging', false)
     .emit('dom', d3.select(e).node())
+    .emit('select', selection)
   
   return f
 }
