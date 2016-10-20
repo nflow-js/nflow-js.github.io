@@ -1,0 +1,5 @@
+var f= nflow.create('f')
+var tree =  nflowVis.Vis()
+  .call(nflowVis.Tree)
+  .emit('track', f)
+  .emit('dom', document.querySelector('figure'))
